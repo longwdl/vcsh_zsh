@@ -1,0 +1,10 @@
+# Wrap cat by bat
+if command -v bat &>/dev/null; then
+	alias cat=bat
+fi
+
+# Wrap ssh by assh
+if command -v assh &>/dev/null; then
+	alias ssh="assh wrapper ssh"
+fi
+

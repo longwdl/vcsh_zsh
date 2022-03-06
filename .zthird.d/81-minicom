@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+export MINICOM='-w -C /tmp/minicom.log'
+

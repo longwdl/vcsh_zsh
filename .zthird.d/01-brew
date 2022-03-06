@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+
+if command -v brew &>/dev/null; then
+	# Cache up brew setting
+	CACHE_UP_BREW="$HOME/.cache-up-brew"
+
+	if [ -f "$CACHE_UP_BREW" ]; then
+		source "$CACHE_UP_BREW"
+	else
+		printf 'export PATH="' >>"$CACHE_UP_BREW"
+		for ite in coreutils gnu-sed grep findutils gnu-tar lsof; do
+			if brew list 2>&1|grep -qsw "$ite"; then
+				printf '%s/libexec/gnubin:' "$(brew --prefix $ite)" >>"$CACHE_UP_BREW"
+			fi
+		done
+		printf '$PATH"\n' >>"$CACHE_UP_BREW"
+		source "$CACHE_UP_BREW"
+	fi
+fi

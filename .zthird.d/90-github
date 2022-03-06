@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+if [ -f "$HOME/.github-token" ]; then
+	export GITHUB_TOKEN="$(cat "$HOME/.github-token")"
+fi
+

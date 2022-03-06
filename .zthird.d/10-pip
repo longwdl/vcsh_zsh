@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+
+# Cache up powerline status setting
+CACHE_UP_PLST="$HOME/.cache-up-plst"
+if [ -f "$CACHE_UP_PLST" ]; then
+	source "$CACHE_UP_PLST"
+else
+	if tmp=$(pip show powerline-status|grep -E ^Location:|awk '{print $2}'); then
+		echo "export _POWERLINE_BIND_PATH=$tmp/powerline/bindings" >"$CACHE_UP_PLST"
+		source "$CACHE_UP_PLST"
+	fi
+fi
+
