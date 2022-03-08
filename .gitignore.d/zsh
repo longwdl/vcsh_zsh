@@ -8,7 +8,6 @@
 !./.zprofile
 !./.zshrc
 !./.zthird.d/01-brew
-!./.zthird.d/10-pip
 !./.zthird.d/40-iterm2
 !./.zthird.d/60-nvm
 !./.zthird.d/80-fzf
