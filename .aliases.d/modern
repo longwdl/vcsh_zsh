@@ -5,6 +5,6 @@ fi
 
 # Wrap ssh by assh
 if command -v assh &>/dev/null; then
-	alias ssh="assh wrapper ssh"
+	alias ssh="assh wrapper ssh --"
 fi
 
