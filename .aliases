@@ -28,6 +28,11 @@ alias lt='ls -lhrt'			# Sort by Time
 alias dfind='find . -type d -name'
 alias ffind='find . -type f -name'
 
+# Use python3 as python if not exist
+if ! command -v python &>/dev/null; then
+	alias python='python3'
+fi
+
 # Cross platform pbcopy
 if command -v clip.exe &>/dev/null; then
 	alias pbcopy='clip.exe'
