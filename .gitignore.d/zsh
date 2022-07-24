@@ -13,5 +13,5 @@
 !./.zthird.d/80-fzf
 !./.zthird.d/81-minicom
 !./.zthird.d/90-github
-!.gitignore.d/pip
-!.LICENSES.d/pip
+!.gitignore.d/zsh
+!.LICENSES.d/zsh
