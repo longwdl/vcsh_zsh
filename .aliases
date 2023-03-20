@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias mysudo='sudo -E env "PATH=$PATH"'
 alias sudo='sudo '
 alias watch='watch '
 
