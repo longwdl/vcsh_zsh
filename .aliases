@@ -29,6 +29,14 @@ alias lt='ls -lhrt'			# Sort by Time
 alias dfind='find . -type d -name'
 alias ffind='find . -type f -name'
 
+mysetup() {
+	if [ -d "$HOME/.setup.d/" ]; then
+		for file in "$HOME/.setup.d"/*; do
+			"$file"
+		done
+	fi
+}
+
 # Use python3 as python if not exist
 if ! command -v python &>/dev/null; then
 	alias python='python3'
