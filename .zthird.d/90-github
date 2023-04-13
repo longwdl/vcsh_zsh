@@ -2,5 +2,6 @@
 
 if [ -f "$HOME/.github-token" ]; then
 	export GITHUB_TOKEN="$(cat "$HOME/.github-token")"
+	export HOMEBREW_GITHUB_API_TOKEN="$(cat "$HOME/.github-token")"
 fi
 
